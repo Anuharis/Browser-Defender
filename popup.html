@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <style>
+        body { width: 350px; font-family: 'Segoe UI', sans-serif; padding: 15px; background: #f4f7f9; margin: 0; }
+        .card { background: white; padding: 12px; margin-bottom: 10px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.05); border-left: 4px solid #2c3e50; }
+        .card-crypto { border-left-color: #e74c3c; }
+        h3 { margin: 0 0 10px 0; font-size: 13px; color: #34495e; text-transform: uppercase; letter-spacing: 0.5px; }
+        input, textarea { width: 100%; box-sizing: border-box; padding: 8px; margin-bottom: 8px; border: 1px solid #dcdfe6; border-radius: 4px; font-size: 12px; }
+        button { width: 100%; padding: 9px; background: #2c3e50; color: white; border: none; border-radius: 4px; cursor: pointer; font-weight: 600; margin-bottom: 4px; }
+        button:hover { background: #1a252f; }
+        .btn-danger { background: #e74c3c; }
+        .btn-danger:hover { background: #c0392b; }
+        .toggle-row { display: flex; justify-content: space-between; align-items: center; font-size: 12px; margin-bottom: 5px; }
+        .status { font-size: 11px; color: #7f8c8d; word-break: break-all; background: #f8f9fa; padding: 5px; border-radius: 4px; min-height: 14px; }
+    </style>
+</head>
+<body>
+    <div class="card card-crypto">
+        <h3>Шифрование текста</h3>
+        <input type="password" id="masterKey" placeholder="Ваш ключ-пароль">
+        <textarea id="textData" rows="2" placeholder="Текст для обработки"></textarea>
+        <div style="display:flex; gap:5px;">
+            <button id="encryptBtn">Зашифровать</button>
+            <button id="decryptBtn">Расшифровать</button>
+        </div>
+        <div id="cryptoStatus" class="status">Ожидание...</div>
+    </div>
+
+    <div class="card">
+        <h3>Анализ утечек</h3>
+        <input type="password" id="leakPass" placeholder="Пароль для проверки">
+        <button id="checkLeakBtn">Проверить по базе</button>
+        <div id="leakStatus" class="status">...</div>
+    </div>
+
+    <div class="card">
+        <h3>Настройки защиты</h3>
+        <div class="toggle-row">
+            <span>Шифр буфера обмена</span>
+            <input type="checkbox" id="clipToggle">
+        </div>
+    </div>
+
+    <div class="card">
+        <h3>Очистка</h3>
+        <button id="clearShort">Очистить (30 мин)</button>
+        <button id="clearFull" class="btn-danger">Полная очистка</button>
+    </div>
+    <script src="popup.js"></script>
+</body>
+</html>

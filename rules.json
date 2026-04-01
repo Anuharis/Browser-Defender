@@ -1,0 +1,7 @@
+[
+  { "id": 1, "priority": 1, "action": { "type": "block" }, "condition": { "urlFilter": "*google-analytics.com*", "resourceTypes": ["script"] } },
+  { "id": 2, "priority": 1, "action": { "type": "block" }, "condition": { "urlFilter": "*mc.yandex.ru*", "resourceTypes": ["script"] } },
+  { "id": 3, "priority": 1, "action": { "type": "block" }, "condition": { "urlFilter": "*doubleclick.net*", "resourceTypes": ["script", "image"] } },
+  { "id": 4, "priority": 1, "action": { "type": "block" }, "condition": { "urlFilter": "*coinhive.com*", "resourceTypes": ["script"] } },
+  { "id": 5, "priority": 1, "action": { "type": "block" }, "condition": { "urlFilter": "*hotjar.com*", "resourceTypes": ["script"] } }
+]
