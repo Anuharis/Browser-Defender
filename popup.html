@@ -24,13 +24,14 @@
         <div style="display:flex; gap:5px;">
             <button id="encryptBtn">Зашифровать</button>
             <button id="decryptBtn">Расшифровать</button>
+            <button id="copyEncryptedBtn" style="width: 100%; background: #3498db;">Копировать результат</button>
         </div>
         <div id="cryptoStatus" class="status">Ожидание...</div>
     </div>
 
     <div class="card">
         <h3>Анализ утечек</h3>
-        <input type="password" id="leakPass" placeholder="Пароль для проверки">
+        <input type="text" id="leakPass" placeholder="Пароль для проверки">
         <button id="checkLeakBtn">Проверить по базе</button>
         <div id="leakStatus" class="status">...</div>
     </div>
